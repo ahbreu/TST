@@ -1,0 +1,48 @@
+<header style="display: block; text-align: center;">
+    <img className="expoLogo" src="https://www.tst.jus.br/documents/10157/29952841/topo.png" />
+    <a className="paginaInicial" style="color: #795C34; text-decoration: none;text-align: center;"
+        href="https://www.tst.jus.br/web/guest/memoriaviva/-/asset_publisher/LGQDwoJD0LV2/content/id/29953219">Voltar
+        para a página inicial</a>
+    <div className="botoes" style="padding-top: 0.5rem;">
+        <button style="background: #795C34; color: #FFFFFF; cursor: pointer; border-radius: 10px;"
+            onclick="plusDivs(-1)">
+            <= Anterior</button>
+                <button style="background: #795C34; color: #FFFFFF; cursor: pointer; border-radius: 10px;"
+                    onclick="plusDivs(1)"> Próximo =></button>
+    </div>
+</header>
+
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+        showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = x.length }
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[slideIndex - 1].style.display = "block";
+    }
+</script>
+
+<body style="background-color: #FCFCEB; font-family: Arial, Helvetica, sans-serif;">
+    <div class="carrosselSlides slides">
+
+        <div class="slides mySlides">
+            
+        </div>
+
+    </div>
+
+</body>
+
+<script>
+    showDivs(slideIndex)
+</script>
